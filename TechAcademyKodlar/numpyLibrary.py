@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec  9 20:06:44 2025
-
-@author: halit
-"""
-
 #%%numpy library
 
 import numpy as np
