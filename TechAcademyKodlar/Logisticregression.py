@@ -24,10 +24,11 @@ df['Outcome'].value_counts()
 #Korelasyon
 df.corr()
 plt.figure()
+# annot true ile sayısal değerleride görürüz
 sns.heatmap(df.corr(),annot=True, cmap ='coolwarm')
 plt.show()
 
-
+# alttakiler 0 değerimi alamaz, 0 olanları ortalamalrı ile değiştirerek veri temizliği yapıyou<
 coltofix = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
 
 
@@ -40,7 +41,7 @@ y = df['Outcome']
 
 X_train, X_test, y_train,y_test =train_test_split(X,y,test_size=0.3, random_state=42)
 
-
+# alt kısımda farklı featurelar arasındaki değişimi birbirine yaklaştırılıyor böylece daha standart bir dağılım oluyor
 scaler = StandardScaler()
 
 X_train_scaled = scaler.fit_transform(X_train)
